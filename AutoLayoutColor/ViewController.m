@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+//Criei propriedades
+
 
 @end
 
@@ -25,5 +27,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)sliderValueDidChange:(id)sender {
+    //Muda a cor do fundo da View
+    self.ViewColor.backgroundColor = [UIColor colorWithRed:self.sliderR.value
+                                                     green:self.sliderG.value
+                                                      blue:self.sliderB.value
+                                                     alpha:1.0f];
+    //Muda a cor do texto da Label
+    self.LabelColor.textColor = [UIColor colorWithRed:self.sliderR.value
+                                                      green:self.sliderG.value
+                                                       blue:self.sliderB.value
+                                                      alpha:1.0f];
+}
+
 
 @end
